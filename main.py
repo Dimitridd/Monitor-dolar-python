@@ -46,13 +46,13 @@ if resposta1 == "s":
 def enviar_email(valor_atual, email):
     msg = EmailMessage()
     msg['Subject'] = "🚨 ALERTA: Oportunidade no Dólar!"
-    msg['From'] = "dimitri.d.deccache@gmail.com"
+    msg['From'] = "Seu email aqui"
     msg['To'] = email
     msg.set_content(f"O dólar atingiu R$ {valor_atual:.4f}. Hora de conferir!")
 
     # Configuração do Servidor (Exemplo Gmail)
     with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
-        smtp.login('dimitri.d.deccache@gmail.com', 'sua senha aqui')
+        smtp.login('seu email aqui', 'sua senha aqui')
         smtp.send_message(msg)
         print("E-mail enviado com sucesso!")
 
